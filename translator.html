@@ -1,0 +1,12 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+  <div class="col-xs-8 col-xs-offset-2">
+    <h2>Op Translator</h2>
+    <button class="btn btn-default" ng-class="{'active': language === 'op'}" ng-click="setLang('op');">Op</button>
+    <button class="btn btn-default" ng-class="{'active': language === 'aw'}" ng-click="setLang('aw');">Aw</button>
+    <button class="btn btn-default" ng-class="{'active': language === 'it'}" ng-click="setLang('it');">It</button>
+    <p style="margin-bottom:25px;">when english doesn't quite cut it...</p>
+    <textarea class="form-control col-xs-12 op" ng-model="op" style="height:150px; margin-bottom:25px;" placeholder="How much wood would a woodchuck chuck if a woodchuck could chuck wood?"></textarea>
+    
+    <textarea class="form-control col-xs-12" style="height:150px; margin-bottom:25px;" placeholder="Hopow mopuch wopoopod wopoopuld opa wopoopodchopuck chopuck opif opa wopoopodchopuck copoopuld chopuck wopoopod?">{{opOutput}}</textarea>
+    <button class="btn btn-primary" ng-click="translateLanguage(language)">Translate!</button>
+  </div>
